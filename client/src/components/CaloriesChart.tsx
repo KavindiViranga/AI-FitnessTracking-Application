@@ -1,4 +1,5 @@
-import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Legend, CartesianGrid } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Legend, 
+    CartesianGrid } from 'recharts';
 import { useAppContext } from '../context/AppContext';
 
 const CaloriesChart = () => {
