@@ -1,4 +1,4 @@
-import { ActivityIcon, HomeIcon, MoonIcon, PersonStandingIcon, SunIcon, UserIcon, UtensilsIcon } from 'lucide-react'
+import { ActivityIcon, HomeIcon, MoonIcon, PersonStandingIcon, SunIcon, UserCircleIcon, UserIcon, UtensilsIcon } from 'lucide-react'
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { useTheme } from '../context/ThemeContext'
