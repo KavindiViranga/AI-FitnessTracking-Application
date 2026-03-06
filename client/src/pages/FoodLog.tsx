@@ -4,7 +4,7 @@ import type { FoodEntry, FormData } from "../types";
 import Card from "../components/ui/Card";
 import { mealColors, mealIcons, mealTypeOptions, quickActivitiesFoodLog } from "../assets/assets";
 import Button from "../components/ui/Button";
-import { Loader2Icon, PlusIcon, SparkleIcon, TrashIcon, UtensilsCrossedIcon } from "lucide-react";
+import { Loader2Icon, PlusIcon, SparkleIcon, Trash2Icon, UtensilsCrossedIcon } from "lucide-react";
 import Input from "../components/ui/Input";
 import Select from "../components/ui/Select";
 import mockApi from "../assets/mockApi";
@@ -238,7 +238,7 @@ const FoodLog = () => {
                             <button onClick={()=> handleDelete(entry?.documentId || '')}
                             className="p-2 text-red-400 hover:text-red-600 hover:bg-red-50 
                             dark:hover:bg-red-900/20 rounded-lg transition-colors" >
-                              <TrashIcon className="w-4 h-4"/>
+                              <Trash2Icon className="w-4 h-4"/>
                             </button>
                           </div>
                         </div>

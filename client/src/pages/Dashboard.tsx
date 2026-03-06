@@ -1,8 +1,8 @@
-import { Activity, useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import { getMotivationalMessage } from "../assets/assets"
 import { useAppContext } from "../context/AppContext"
 import type { ActivityEntry, FoodEntry } from "../types"
-import { ActivityIcon, FlameIcon, HamburgerIcon, RulerIcon, ScaleIcon, TrendingUpIcon, User, ZapIcon } from "lucide-react"
+import { ActivityIcon, FlameIcon, HamburgerIcon, RulerIcon, ScaleIcon, TrendingUpIcon, ZapIcon } from "lucide-react"
 import Card from "../components/ui/Card"
 import ProgressBar from "../components/ui/ProgressBar"
 import CaloriesChart from "../components/CaloriesChart"
@@ -11,7 +11,7 @@ const Dashboard = () => {
 
     const {user, allActivityLogs, allFoodLogs} = useAppContext() 
     const [todayFood, setTodayFood] = useState<FoodEntry[]>([])
-    const [todayActivities, setTodayActivities] = useState<ActivityEntry>([])
+    const [todayActivities, setTodayActivities] = useState<ActivityEntry[]>([])
 
     const DAILY_CALORIE_LIMIT: number = user?.dailyCalorieIntake || 2000;
 
