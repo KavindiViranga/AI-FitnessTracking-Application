@@ -4,7 +4,7 @@ import type { FoodEntry, FormData } from "../types";
 import Card from "../components/ui/Card";
 import { mealColors, mealIcons, mealTypeOptions, quickActivitiesFoodLog } from "../assets/assets";
 import Button from "../components/ui/Button";
-import { Loader2Icon, PlusIcon, SparkleIcon, TrashIcon, UtensilsCrossedIcon, UtensilsIcon } from "lucide-react";
+import { Loader2Icon, PlusIcon, SparkleIcon, TrashIcon, UtensilsCrossedIcon } from "lucide-react";
 import Input from "../components/ui/Input";
 import Select from "../components/ui/Select";
 import mockApi from "../assets/mockApi";
@@ -68,6 +68,13 @@ const FoodLog = () => {
     setShowForm(true)
   }
 
+  const handleImageChange =  async (e: React.
+    ChangeEvent<HTMLInputElement>)=>{
+      const file = e.target.files?.[0];
+      if(!file) return;
+    }
+  
+
   useEffect(()=>{
     (()=>{
       loadEntries();
@@ -120,7 +127,8 @@ const FoodLog = () => {
               <SparkleIcon className='size-5' /> 
                AI Food Snap
               </Button>
-              <input type="file" accept="image/*" hidden ref={inputRef} />
+              <input onChange={handleImageChange} type="file" accept="image/*" 
+              hidden ref={inputRef} />
               {loading && (
                 <div className="fixed inset-0 bg-slate-100/50 dark:bg-slate-900/50 
                 backdrop-blur flex items-center justify-center z-100">
